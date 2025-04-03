@@ -1,0 +1,38 @@
+import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button";
+
+const Home = () => { return ( <div className="min-h-screen bg-gradient-to-b from-green-100 to-green-300 p-6"> <div className="max-w-4xl mx-auto"> <header className="text-center mb-8"> <h1 className="text-4xl font-bold text-green-800 mb-4">Fresh Harvest</h1> <p className="text-lg text-green-700">სტაბილური ხარისხი, უგემრიელესი პროდუქტი - მთელი წელი!</p> </header>
+
+<section className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+      <Card className="shadow-lg">
+        <CardContent>
+          <h2 className="text-2xl font-semibold mb-2">ჩვენ შესახებ</h2>
+          <p>"Fresh Harvest" გთავაზობთ მაღალი ხარისხის სალათის ფურცლებს, რუკოლას, მიკრომწვანილებს, წითელ ფხალს და პრასს. ჩვენს პროდუქტებს მთელი წლის განმავლობაში გთავაზობთ სტაბილური ხარისხითა და მუდმივად ხელმისაწვდომი ფასებით.</p>
+        </CardContent>
+      </Card>
+
+      <Card className="shadow-lg">
+        <CardContent>
+          <h2 className="text-2xl font-semibold mb-2">პროდუქტები</h2>
+          <ul className="list-disc pl-4">
+            <li>სალათის ფურცლები</li>
+            <li>რუკოლა</li>
+            <li>მიკრომწვანილები</li>
+            <li>წითელი ფხალი</li>
+            <li>პრასი</li>
+          </ul>
+        </CardContent>
+      </Card>
+    </section>
+
+    <section className="text-center">
+      <Button className="bg-green-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-green-700">
+        დაგვიკავშირდით
+      </Button>
+    </section>
+  </div>
+</div>
+
+); };
+
+export default Home;
+
