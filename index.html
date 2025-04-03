@@ -1,76 +1,54 @@
-<!DOCTYPE html><html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Harvest - Natural & Fresh Produce</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #2ecc71;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 8px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #2ecc71;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Fresh Harvest</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="home">
-        <h2>Welcome to Fresh Harvest</h2>
-        <p>Providing fresh, natural, and organic produce directly from our garden to your table.</p>
+import React from 'react'; import { Card, CardContent } from '@/components/ui/card'; import { Button } from '@/components/ui/button'; import { motion } from 'framer-motion';
+
+const Home = () => { return ( <div className="min-h-screen bg-white text-gray-800"> <header className="flex justify-between items-center p-6 bg-green-500 text-white shadow-lg"> <div className="flex items-center space-x-4"> <img src="/logo.png" alt="Fresh Harvest Logo" className="h-12" /> <h1 className="text-2xl font-bold">Fresh Harvest</h1> </div> <nav className="space-x-6"> <a href="#products" className="hover:text-green-200">პროდუქტები</a> <a href="#about" className="hover:text-green-200">ჩვენს შესახებ</a> <a href="#contact" className="hover:text-green-200">კონტაქტი</a> </nav> </header>
+
+<main className="p-6 space-y-12">
+    <section className="text-center space-y-4">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+        <h2 className="text-4xl font-bold">მაღალი ხარისხის მიკრომწვანილები და მწვანილები</h2>
+        <p className="text-lg">გაიგეთ მეტი ჩვენს პროდუქციაზე და შეუკვეთეთ ონლაინ!</p>
+        <Button className="mt-4 bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full">გაიგე მეტი</Button>
+      </motion.div>
     </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Fresh Salad Leaves</li>
-            <li>Rucola</li>
-            <li>Microgreens</li>
-        </ul>
+
+    <section id="products" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <Card>
+        <CardContent>
+          <h3 className="text-xl font-bold">სალათის ფურცლები</h3>
+          <p>გამორჩეული გემო და ხარისხი.</p>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent>
+          <h3 className="text-xl font-bold">რუკოლა</h3>
+          <p>ახალი და ჯანმრთელი მწვანილი.</p>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent>
+          <h3 className="text-xl font-bold">მიკრომწვანილები</h3>
+          <p>მაღალი ხარისხი და ჯანმრთელობა.</p>
+        </CardContent>
+      </Card>
     </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: freshharvest@example.com</p>
-        <p>Phone: +995 595 078 871</p>
+
+    <section id="about" className="text-center">
+      <h2 className="text-3xl font-bold">ჩვენს შესახებ</h2>
+      <p className="mt-4">Fresh Harvest არის თქვენი საუკეთესო არჩევანი ახალი, ეკოლოგიურად სუფთა პროდუქციისთვის.</p>
     </section>
-    <footer>
-        <p>&copy; 2025 Fresh Harvest. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+
+    <section id="contact" className="text-center">
+      <h2 className="text-3xl font-bold">კონტაქტი</h2>
+      <p className="mt-4">დაგვიკავშირდით Facebook-ზე ან მოგვწერეთ ელფოსტაზე: freshharvest@example.com</p>
+    </section>
+  </main>
+
+  <footer className="p-6 bg-green-500 text-white text-center">
+    © 2025 Fresh Harvest. ყველა უფლება დაცულია.
+  </footer>
+</div>
+
+); };
+
+export default Home;
+
